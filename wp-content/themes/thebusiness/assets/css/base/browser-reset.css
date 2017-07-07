@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: inherit; }
+  a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: inherit;
+    outline: none; }
+
+ul {
+  margin: 0;
+  paddin: 0; }
+
+input[type='text'], .form-control {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none; }
+
+input[type='text']:focus, .form-control:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  color: inherit; }
+
+.form-control {
+  border-radius: 0px; }
+
+/*# sourceMappingURL=browser-reset.css.map */
