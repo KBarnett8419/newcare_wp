@@ -36,6 +36,9 @@ if (!function_exists('thebusiness_single_page_title')) :
 					    </div>
 					</div>
 				</div>
+			</div>
+			<div class="beardcum-wrap">
+				  <div class="container clearfix">
 				<?php 
 				/**
 				 * thebusiness_action_after_title hook
@@ -45,8 +48,8 @@ if (!function_exists('thebusiness_single_page_title')) :
 				 */
 				do_action( 'thebusiness_action_after_title' );
 				?>
-			</div>
-
+	          </div>
+          </div>
 		<?php 
 	}
 endif;

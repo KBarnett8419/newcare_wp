@@ -9,7 +9,8 @@
 
     <?php   
         $section_title = get_theme_mod('education_zone_blog_section_title');
-        $ed_date     = get_theme_mod('education_zone_ed_blog_date','1');
+        $ed_date       = get_theme_mod('education_zone_ed_blog_date','1');
+        $read_more     = get_theme_mod( 'education_zone_blog_section_readmore' , __( 'Read More', 'education-zone' ) );
         
         education_zone_get_section_header( $section_title ); ?>
     
@@ -41,24 +42,32 @@
                             <a href="<?php the_permalink(); ?>" class="post-thumbnail">
                                 <?php the_post_thumbnail( 'education-zone-blog-full' );?>
                             </a>
-                        <?php } ?>
+                        <?php }else{ ?>
+                                    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/fallback.png' ); ?>" alt="<?php the_title_attribute(); ?>" />        
+                                <?php } ?>
                         <div class="image-wrapper">
                             <div class="text">
                                 <header class="entry-header">
                                     <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                    <div class="entry-meta">
-                                    <span class="posted-on"><i class="fa fa-calendar-o"></i><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date( __( 'j M, Y' , 'education-zone' ) ) ); ?></a></span>
-                                    <span class="time"><i class="fa fa-clock-o"></i><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date( __( 'g:i A', 'education-zone' ) ) ); ?></a></span>
-                                </div>
+                                    <?php 
+                                    if( $ed_date ){ ?>
+                                        <div class="entry-meta">
+                                            <span class="posted-on"><i class="fa fa-calendar-o"></i><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date( __( 'j M, Y' , 'education-zone' ) ) ); ?></a></span>
+                                            <span class="time"><i class="fa fa-clock-o"></i>    <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date( __( 'g:i A', 'education-zone' ) ) ); ?></a>
+                                            </span>
+                                        </div>
+                                    <?php } ?>
                                 </header>
                                 
                                 <div class="entry-content">
                                 <?php the_excerpt(); ?>
                                 </div>
-                            
-                                <div class="entry-footer">
-                                <a href="<?php the_permalink(); ?>" class="learn-more"><?php echo esc_html__( 'Learn More', 'education-zone' ); ?></a>
-                                </div>
+
+                                <?php if( $read_more ){ ?>
+                                    <div class="entry-footer">
+                                        <a href="<?php the_permalink(); ?>" class="learn-more"><?php echo esc_html( $read_more ); ?></a>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                         </article>
@@ -92,9 +101,12 @@
 						<article class="post">
 							<header class="entry-header">
 								<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<div class="entry-meta">
-									<span><i class="fa fa-calendar-o"></i><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date( __( 'j M, Y', 'education-zone' ) ) ); ?></a></span>
-								</div>
+								<?php 
+                                if( $ed_date ){ ?>
+                                    <div class="entry-meta">
+    									<span><i class="fa fa-calendar-o"></i><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date( __( 'j M, Y', 'education-zone' ) ) ); ?></a></span>
+    								</div>
+                                <?php } ?>
 							</header>
 						</article>
 					</li>

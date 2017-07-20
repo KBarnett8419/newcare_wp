@@ -5,7 +5,7 @@ Tags: Full-Width-Template, Left-Sidebar, One-Column, Post-Formats, Right-Sidebar
 
 Requires at least: 4.0
 Tested up to: 4.8
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -56,6 +56,10 @@ Other are slef made :)
 
 
 == Changelog ==
+
+= 1.0.8 =
+Design bug fixed
+Post and page meta managed
 
 = 1.0.7 =
 Update to pro button added on the customizer

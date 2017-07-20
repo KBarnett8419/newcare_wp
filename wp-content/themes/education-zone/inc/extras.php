@@ -58,10 +58,34 @@ function education_zone_header(){
     ?>
     <div class="page-header">
 		<div class="container">
-	
+	        
             <?php
-            
-            if( is_archive() ) the_archive_title( '<h1 class="page-title">', '</h1>' ); 
+            /** For Woocommerce */
+            if( education_zone_is_woocommerce_activated() && ( is_product_category() || is_product_tag() || is_shop() ) ){
+                if( is_shop() ){
+                    if( get_option( 'page_on_front' ) == wc_get_page_id( 'shop' ) ) {
+                        return;
+                    }
+
+                    $_name = wc_get_page_id( 'shop' ) ? get_the_title( wc_get_page_id( 'shop' ) ) : '';
+                    if( ! $_name ){
+                        $product_post_type = get_post_type_object( 'product' );
+                        $_name = $product_post_type->labels->singular_name; ?>
+                        <h1 class="page-title"><?php echo esc_html( $_name ); ?></h1>
+                    <?php 
+                    } 
+
+                }elseif( is_product_category() || is_product_tag() ){
+                    $current_term = $GLOBALS['wp_query']->get_queried_object(); ?>
+                    <h1 class="page-title"><?php echo esc_html( $current_term->name ); ?> </h1>
+                <?php 
+                } 
+            }else{
+                if( is_archive() ){ ?> 
+                    <h1 class="page-title"> <?php the_archive_title(); ?> </h1>
+                <?php 
+                }
+            } 
             
             if( is_search() ){ 
                 global $wp_query;    
@@ -117,13 +141,40 @@ function education_zone_breadcrumbs_cb(){
         
         } else {
         
-            echo '<div id="crumbs"><a href="' . esc_url( $homeLink ) . '">' . esc_html( $home ) . '</a> <span class="separator">' . esc_html( $delimiter ) . '</span> ';
+             echo '<div id="crumbs"><a href="' . esc_url( $homeLink ) . '">' . esc_html( $home ) . '</a> <span class="separator">' . esc_html( $delimiter ) . '</span> ';
         
             if ( is_category() ) {
                 $thisCat = get_category( get_query_var( 'cat' ), false );
                 if ( $thisCat->parent != 0 ) echo get_category_parents( $thisCat->parent, TRUE, ' <span class="separator">' . $delimiter . '</span> ' );
                 echo $before .  esc_html( single_cat_title( '', false ) ) . $after;
             
+            } elseif( education_zone_is_woocommerce_activated() && ( is_product_category() || is_product_tag() ) ){ //For Woocommerce archive page
+        
+                $current_term = $GLOBALS['wp_query']->get_queried_object();
+                if( is_product_category() ){
+                    $ancestors = get_ancestors( $current_term->term_id, 'product_cat' );
+                    $ancestors = array_reverse( $ancestors );
+                    foreach ( $ancestors as $ancestor ) {
+                        $ancestor = get_term( $ancestor, 'product_cat' );    
+                        if ( ! is_wp_error( $ancestor ) && $ancestor ) {
+                            echo ' <a href="' . esc_url( get_term_link( $ancestor ) ) . '">' . esc_html( $ancestor->name ) . '</a> <span class="separator">' . esc_html( $delimiter ) . '</span> ';
+                        }
+                    }
+                }           
+                echo $before . esc_html( $current_term->name ) . $after;
+                
+            } elseif( education_zone_is_woocommerce_activated() && is_shop() ){ //Shop Archive page
+                if ( get_option( 'page_on_front' ) == wc_get_page_id( 'shop' ) ) {
+                    return;
+                }
+                $_name = wc_get_page_id( 'shop' ) ? get_the_title( wc_get_page_id( 'shop' ) ) : '';
+        
+                if ( ! $_name ) {
+                    $product_post_type = get_post_type_object( 'product' );
+                    $_name = $product_post_type->labels->singular_name;
+                }
+                echo $before . esc_html( $_name ) . $after;
+                
             } elseif ( is_search() ) {
                 echo $before . esc_html__( 'Search Results for "', 'education-zone' ) . esc_html( get_search_query() ) . esc_html__( '"', 'education-zone' ) . $after;
             
@@ -141,7 +192,23 @@ function education_zone_breadcrumbs_cb(){
         
             } elseif ( is_single() && !is_attachment() ) {
                 
-                if ( get_post_type() != 'post' ) {
+                if( education_zone_is_woocommerce_activated() && 'product' === get_post_type() ){ //For Woocommerce single product
+                    if ( $terms = wc_get_product_terms( $post->ID, 'product_cat', array( 'orderby' => 'parent', 'order' => 'DESC' ) ) ) {
+                        $main_term = apply_filters( 'woocommerce_breadcrumb_main_term', $terms[0], $terms );
+                        $ancestors = get_ancestors( $main_term->term_id, 'product_cat' );
+                        $ancestors = array_reverse( $ancestors );
+                        foreach ( $ancestors as $ancestor ) {
+                            $ancestor = get_term( $ancestor, 'product_cat' );    
+                            if ( ! is_wp_error( $ancestor ) && $ancestor ) {
+                                echo ' <a href="' . esc_url( get_term_link( $ancestor ) ) . '">' . esc_html( $ancestor->name ) . '</a> <span class="separator">' . esc_html( $delimiter ) . '</span> ';
+                            }
+                        }
+                        echo ' <a href="' . esc_url( get_term_link( $main_term ) ) . '">' . esc_html( $main_term->name ) . '</a> <span class="separator">' . esc_html( $delimiter ) . '</span> ';
+                    }
+                    
+                    echo $before . esc_html( get_the_title() ) . $after;
+                
+                } elseif ( get_post_type() != 'post' ) {
                     
                     $post_type = get_post_type_object( get_post_type() );
                     
@@ -310,8 +377,11 @@ add_filter( 'comment_form_fields', 'education_zone_move_comment_field_to_bottom'
     $gplus     = get_theme_mod( 'education_zone_gplus' );
     $instagram = get_theme_mod( 'education_zone_instagram' );
     $youtube   = get_theme_mod( 'education_zone_youtube' );
+    $ok        = get_theme_mod( 'education_zone_ok' );
+    $vk        = get_theme_mod( 'education_zone_vk' );
+    $xing      = get_theme_mod( 'education_zone_xing' );
     
-    if( $facebook || $twitter || $pinterest || $linkedin || $gplus || $instagram || $youtube ){
+    if( $facebook || $twitter || $pinterest || $linkedin || $gplus || $instagram || $youtube || $ok || $vk || $xing ){
     
     ?>
 	<ul class="social-networks">
@@ -329,6 +399,12 @@ add_filter( 'comment_form_fields', 'education_zone_move_comment_field_to_bottom'
         <li><a href="<?php echo esc_url( $instagram ); ?>" target="_blank" title="<?php esc_attr_e( 'Instagram', 'education-zone' );?>"><i class="fa fa-instagram"></i></a></li>
 		<?php } if( $youtube ){ ?>
         <li><a href="<?php echo esc_url( $youtube ); ?>" target="_blank" title="<?php esc_attr_e( 'YouTube', 'education-zone' );?>"><i class="fa fa-youtube-square"></i></a></li>
+        <?php } if( $ok ){ ?>
+        <li><a href="<?php echo esc_url( $ok ); ?>" target="_blank" title="<?php esc_attr_e( 'OK', 'education-zone' );?>"><i class="fa fa-odnoklassniki"></i></a></li>
+        <?php } if( $vk ){ ?>
+        <li><a href="<?php echo esc_url( $vk ); ?>" target="_blank" title="<?php esc_attr_e( 'VK', 'education-zone' );?>"><i class="fa fa-vk"></i></a></li>
+        <?php } if( $xing ){ ?>
+        <li><a href="<?php echo esc_url( $xing ); ?>" target="_blank" title="<?php esc_attr_e( 'Xing', 'education-zone' );?>"><i class="fa fa-xing"></i></a></li>
         <?php } ?>
 	</ul>
     <?php

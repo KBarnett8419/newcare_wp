@@ -26,8 +26,21 @@
                 $('html,body').animate({ scrollTop: 0 }, 1000);
                 return false; 
             });
-        });      
+        }); 
 
+        //sticky nav    
+          var  mn = $("#masthead");
+            mns = "main-nav-scrolled";
+            hdr = $('.header-accessories').height();
+
+        $(window).scroll(function() {
+          if( $(this).scrollTop() > hdr ) {
+            mn.addClass(mns);
+          } else {
+            mn.removeClass(mns);
+          }
+        });
+        
         //slidenav
         $("#tbNavToggle").click(function(){
           $("#site-navigation").css("width", "250px");

@@ -190,7 +190,6 @@ function education_zone_scripts() {
 		);
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri(). '/css/font-awesome.css' );
-    wp_enqueue_style( 'flexslider', get_template_directory_uri(). '/css/flexslider.css' );
     wp_enqueue_style( 'lightslider', get_template_directory_uri(). '/css/lightslider.css' );
     wp_enqueue_style( 'jquery-sidr-light', get_template_directory_uri(). '/css/jquery.sidr.light.css' );    
     wp_enqueue_style( 'education-zone-google-fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ) );
@@ -199,13 +198,17 @@ function education_zone_scripts() {
     if( education_zone_is_woocommerce_activated() )
     wp_enqueue_style( 'education-zone-woocommerce-style', get_template_directory_uri(). '/css/woocommerce.css', EDUCATION_ZONE_THEME_VERSION );
   
-
-    wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '2.6.0', true );
     wp_enqueue_script( 'lightslider', get_template_directory_uri() . '/js/lightslider.js', array('jquery'), '1.1.3', true );
     wp_enqueue_script( 'jquery-sidr', get_template_directory_uri() . '/js/jquery.sidr.js', array('jquery'), '2.6.0', true );
 	wp_enqueue_script( 'waypoint', get_template_directory_uri() . '/js/waypoint.js', array('jquery'), '2.0.3', true );
 	wp_enqueue_script( 'jquery-counterup', get_template_directory_uri() . '/js/jquery.counterup.js', array('jquery', 'waypoint'), '1.0', true );
-	wp_enqueue_script( 'education-zone-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), EDUCATION_ZONE_THEME_VERSION, true );
+	
+	wp_register_script( 'education-zone-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), EDUCATION_ZONE_THEME_VERSION, true );
+    
+	$custom_array = array('rtl' => is_rtl(), );
+	
+	wp_localize_script( 'education-zone-custom', 'education_zone_data', $custom_array );
+	wp_enqueue_script( 'education-zone-custom' );
     
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -264,3 +267,16 @@ require get_template_directory() . '/inc/info.php';
 */
 if( education_zone_is_woocommerce_activated() )
 require get_template_directory() . '/inc/woocommerce-functions.php';
+
+
+
+/**
+ * Plugin Recommendation
+*/
+require get_template_directory() . '/inc/tgmpa/recommended-plugins.php';
+
+
+/**
+ * Demo Import
+*/
+require get_template_directory() . '/inc/import-hooks.php';

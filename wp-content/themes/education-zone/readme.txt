@@ -1,11 +1,11 @@
 === Education Zone ===
 Author: Rara Theme (http://raratheme.com)
 
-Tags: blog, two-columns, right-sidebar, footer-widgets, custom-background, custom-menu, featured-images, threaded-comments, translation-ready, full-width-template, education, theme-options, custom-logo, e-commerce, one-column
+Tags: blog, two-columns, right-sidebar, footer-widgets, custom-background, custom-menu, featured-images, threaded-comments, translation-ready, full-width-template, education, theme-options, custom-logo, e-commerce, one-column, post-formats
 
 Requires at least: 4.5.3
-Tested up to: 4.7.1
-Stable tag: 1.1.0
+Tested up to: 4.7.5
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,8 +58,6 @@ https://pixabay.com/en/desk-stationery-pens-rulers-600482/
 
 # JS
 
-jquery.flexslider.js, http://www.woothemes.com/flexslider/ - Copyright (c) 2015 WooThemes, http://www.gnu.org/licenses/gpl-2.0.html
-
 jquery.sidr.js, https://github.com/artberri/sidr, (C) 2013 Alberto Varela, MIT License, https://github.com/artberri/sidr/blob/master/LICENSE
 
 lightslider.js, https://github.com/sachinchoolur/lightslider, (C) Sachin, MIT, http://opensource.org/licenses/MIT 
@@ -89,9 +87,15 @@ Education Zone WordPress Theme is distributed under the terms of the GPLv2 or la
    
    
 == Changelog ==
+    1.1.1
+    * Made Theme RTL compatible
+    * Fixed minor design issues.
+    * Fixed minor issue on blog section.
+    * New: Added Video Tutorial Section on Customizer.
+
     1.1.0
     * Changed Screenshot.
-    * Made woocommerce compatible.
+    * Made theme woocommerce compatible.
 
     1.0.9
     * Changed Screenshot.

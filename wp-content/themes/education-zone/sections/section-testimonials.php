@@ -30,8 +30,7 @@ $cat   = get_theme_mod( 'education_zone_testimonial_category' ); ?>
             $qry = new WP_Query( $args );
 
             if( $qry->have_posts() ){ ?>
-                <div class="flexslider">
-                    <ul class="slides">
+                    <ul class="testimonial-slide">
                     <?php 
                         while( $qry->have_posts() ){ $qry->the_post(); ?>
                         <li>
@@ -50,7 +49,6 @@ $cat   = get_theme_mod( 'education_zone_testimonial_category' ); ?>
                         wp_reset_postdata();
                     ?>
                     </ul>
-                </div>
             <?php 
             } 
         } 

@@ -1,0 +1,47 @@
+.entry-content{
+    width: 100% !important;
+    max-width:100% !important;
+}
+
+.entry-title{
+    display: none;
+}
+
+.sidebar{
+    display: none !important;
+}
+
+.content{
+    width: 100% !important;
+}
+
+.reveal-modal{
+    background: white !important;
+}
+.bpm_left_modal{
+    background: white !important;
+}
+
+#bpm_content_area .ui-icon{
+    display:none !important;
+}
+
+#bpm_content_area .open{
+    font-size: 1.5em !important;
+}
+
+#bpm_edit_user_profile_list{
+    background: white !important;
+}
+
+#bpm_edit_user_profile div{
+    background: white !important;
+}
+
+#bpm_reset_password_window{
+    background: white !important;
+}
+
+#bpm_content_area .ui-accordion-content{
+    display:none !important;
+}

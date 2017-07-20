@@ -556,7 +556,7 @@ a:active {
 	display: block;
 	text-decoration: none;
 	position: relative;
-  left: 50%;
+  left: 25%;
 }
 
 .main-navigation ul ul {
@@ -615,6 +615,18 @@ a:active {
 	display: block;
 }
 
+@media screen and (min-width: 20em) {
+	.menu-toggle {
+		display: block;
+	}
+	.main-navigation ul {
+		display: none;
+	}
+
+
+
+}
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -622,6 +634,7 @@ a:active {
 	.main-navigation ul {
 		display: block;
 	}
+
 }
 
 .site-main .comment-navigation,
@@ -900,6 +913,10 @@ object {
 /*-------------------------------------------------------
 							AUTHOR INPUT
 ---------------------------------------------------------*/
+html, body {
+font-family: 'Prata', serif;
+overflow-x: hidden;
+}
 
 #masthead {
 	position: relative;
@@ -909,13 +926,14 @@ object {
 .site-branding h1 {
 	color: #990000;
 	text-transform: uppercase;
-  text-align: center;
 }
 
 h1.entry-title {
 	display: none;
 }
 
+
+/*========NAVIGATION / MENU mobile======*/
 .main-navigation {
 	border: 1px solid #990000;
   background-color: #990000;
@@ -929,72 +947,167 @@ h1.entry-title {
 	padding: 10px 0;
 }
 
-#home-section-1, #issp-home, #adl-home, #home-contact-info  {
-  border: 1px solid #fff;
-  width: 20%;
-  height: 300px;
-  float: left;
-  padding: 1%;
-  color: #404040;
-  text-align: left;
-}
-
-#home-section-1 {
-  background-color: #adb2b8;
-}
-
-#home-section-1 h2 {
-  text-align: center;
-}
-
-#home-section-1 ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-#home-section-1 ul li {
-  display: block;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.4em;
-}
-
-#issp-home{
-background-color: #d8ddef;
-}
-
-#issp-home h2 {
-margin-left: 7%;
-}
-
-#adl-home {
-background-color: #b4b8ab;
-}
-
-#adl-home h2 {
-margin-left: 7%;
-}
-
-#home-contact-info {
-  background-color: #dce0d9;
-  text-align: center;
-}
-
-.section-links {
-  margin-left: 7%;
-}
-
-.serving-areas {
-  display: none;
-}
-
-.boxed-section-container {
-	clear: both;
-  position: relative;
-	left: 9.5%;
-  bottom: 70px;
-}
-
+/*=======	FOOTER ======================*/
 footer {
 	text-align: center;
+	position: relative;
+  top: 50px;
+}
+
+/*======= HOME BOXES ==================*/
+.boxed-section-container {
+	position: relative;
+	left: 0;
+	bottom: 0;
+}
+
+#home-section-1, #home-section-2, #home-section-3, #home-section-4  {
+	display: block;
+	border: none;
+	width: 100%;
+	height: auto;
+	float: none;
+	padding: 5%;
+	color: #404040;
+	text-align: left;
+}
+
+.nc-content-wrapper h2 {
+	font-size: 1.5em;
+}
+
+.nc-content-wrapper h3 {
+	font-size: 1.2em;
+}
+
+.nc-content-wrapper p {
+	font-size: 1em;
+}
+
+
+
+
+@media screen and (min-width: 940px) {
+
+	.site-branding h1 {
+		color: #990000;
+		text-transform: uppercase;
+		position: relative;
+		left: 100px;
+	}
+
+	img {
+		position: relative;
+		top: 70px;
+	}
+
+/*==========NAVIGATION 940==================*/
+.main-navigation {
+	border: 1px solid #990000;
+  background-color: #990000;
+	text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.main-navigation button {
+	padding: 10px 0;
+}
+
+/*=========HOME BOXES 940====================*/
+	#home-section-1, #home-section-2, #home-section-3, #home-section-4  {
+	  border: 1px solid #fff;
+	  width: 20%;
+	  height: 300px;
+	  float: left;
+	  padding: 1%;
+	  color: #404040;
+	  text-align: left;
+	}
+
+	#home-section-1 {
+	  background-color: #efcfac;
+	}
+
+	#home-section-1 h2 {
+	  text-align: center;
+	}
+
+	#home-section-1 ul {
+	  list-style: none;
+	  padding-left: 0;
+	}
+
+	#home-section-1 ul li {
+	  display: block;
+	  text-decoration: none;
+	  font-weight: bold;
+	  font-size: 1.4em;
+	}
+
+	#home-section-2{
+	background-color: #fceed1;
+	}
+
+	#home-section-2 h2 {
+	margin-left: 7%;
+	}
+
+	#home-section-3 {
+	background-color: #edcba8;
+	}
+
+	#home-section-3 h2 {
+	margin-left: 7%;
+	}
+
+	#home-section-4 {
+	  background-color: #f2dcbc;
+	  text-align: center;
+	}
+
+	.section-links {
+	  margin-left: 7%;
+	}
+
+	.serving-areas {
+	  display: none;
+	}
+
+	.boxed-section-container {
+		clear: both;
+	  position: relative;
+		left: 9.5%;
+	  bottom: 70px;
+	}
+
+	/*========OTHER PAGE FORMAT==============*/
+	.nc-content-container {
+		width: 100%;
+	}
+
+	.nc-content-wrapper {
+		margin: 5%;
+	}
+
+	.nc-content-wrapper h2 {
+		font-size: 2em;
+	}
+
+	.nc-content-wrapper h3 {
+		font-size: 1.5em;
+	}
+
+	.nc-content-wrapper p {
+		font-size: 1.2em;
+	}
+
+	#service-img {
+		float: right;
+		margin-right: 5%;
+	}
+
+}
+
 }

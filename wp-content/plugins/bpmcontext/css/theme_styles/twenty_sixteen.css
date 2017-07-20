@@ -1,0 +1,28 @@
+.content-area{
+    width:100%
+}
+
+.bpm_content_area a {
+    box-shadow: none;
+}
+
+.dropdown {
+    margin-left: 0px !important;
+}
+
+.entry-content{
+    width: 100% !important;
+    max-width:100% !important;
+}
+
+.entry-title{
+    display: none;
+}
+
+.sidebar{
+    display: none !important;
+}
+
+.content{
+    width: 100% !important;
+}

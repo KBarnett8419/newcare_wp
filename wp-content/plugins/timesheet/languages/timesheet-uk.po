@@ -1,0 +1,497 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Timesheet\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-21 19:18+0300\n"
+"PO-Revision-Date: 2016-12-29 19:20+0300\n"
+"Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language-Team: BestWebSoft Team <wp@bestwebsoft.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n%10==1 && n%100!=11) ? 3 : "
+"((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../timesheet.php:59 ../timesheet.php:61 ../timesheet.php:1363
+msgid "Report"
+msgstr "Звіт"
+
+#: ../timesheet.php:149
+msgid "Work In Office"
+msgstr "Робота в офісі"
+
+#: ../timesheet.php:155
+msgid "Work Remotely"
+msgstr "Віддалена робота"
+
+#: ../timesheet.php:161
+msgid "Will be absent"
+msgstr "Відсутність"
+
+#: ../timesheet.php:167
+msgid "Vacation"
+msgstr "Відпустка"
+
+#: ../timesheet.php:293
+msgid "Timesheet Reminder"
+msgstr "Timesheet Нагадування"
+
+#: ../timesheet.php:294
+msgid "Hi"
+msgstr "Привіт"
+
+#: ../timesheet.php:294
+msgid "Please complete your timesheet for the following days"
+msgstr "Будь ласка, заповніть ваш графік за наступні дні"
+
+#: ../timesheet.php:294
+msgid "Complete Timesheet Now"
+msgstr "Заповнити Графік Зараз"
+
+#: ../timesheet.php:294
+msgid "Do not reply to this message. This is an automatic mailing."
+msgstr "Не відповідайте на це повідомлення. Це автоматична розсилка."
+
+#: ../timesheet.php:384
+msgid "Please, input status name"
+msgstr "Будь ласка, введіть назву статуса"
+
+#: ../timesheet.php:389 ../timesheet.php:391
+msgid "Please, choose status color"
+msgstr "Будь ласка, виберіть колір статуса"
+
+#: ../timesheet.php:396
+#, php-format
+msgid "Status with name \"%s\" or with color %s already exists"
+msgstr "Статус з назвою \"%s\" або кольором %s вже існує"
+
+#: ../timesheet.php:400
+#, php-format
+msgid ""
+"The status with the color %s can not be saved. Please choose a different "
+"color."
+msgstr ""
+"Статус з кольором %s не може бути збережен. Будь ласка виберіть інший колір."
+
+#: ../timesheet.php:413
+msgid "Status has been successfully added"
+msgstr "Статус успішно додан"
+
+#: ../timesheet.php:415 ../timesheet.php:418
+msgid "Status has not been added"
+msgstr "Статус не було додано"
+
+#: ../timesheet.php:571
+msgid "Settings saved"
+msgstr "Налаштування збережені"
+
+#: ../timesheet.php:582
+msgid "All plugin settings were restored."
+msgstr "Всі настройки плагіна відновлені."
+
+#: ../timesheet.php:596
+msgid "Timesheet Settings"
+msgstr "Нaлаштування Timesheet"
+
+#: ../timesheet.php:598 ../timesheet.php:1926 ../timesheet.php:1939
+msgid "Settings"
+msgstr "Налаштування"
+
+#: ../timesheet.php:599
+msgid "Go PRO"
+msgstr "Перейти на PRO версію"
+
+#: ../timesheet.php:603 ../timesheet.php:985 ../timesheet.php:1366
+msgid "WARNING"
+msgstr "УВАГА"
+
+#: ../timesheet.php:603 ../timesheet.php:985 ../timesheet.php:1366
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "Плагін працює коректно тільки при включеному JavaScript."
+
+#: ../timesheet.php:619
+msgid "Timeline"
+msgstr "Час"
+
+#: ../timesheet.php:622
+msgctxt "timeline"
+msgid "from"
+msgstr "від"
+
+#: ../timesheet.php:622
+msgctxt "timeline"
+msgid "to"
+msgstr "до"
+
+#: ../timesheet.php:622
+msgctxt "timeline"
+msgid "hours"
+msgstr "годин"
+
+#: ../timesheet.php:630
+msgid "Weekends"
+msgstr "Вихідні"
+
+#: ../timesheet.php:643 ../timesheet.php:677
+msgid "Statuses"
+msgstr "Статуси"
+
+#: ../timesheet.php:646
+msgid "Name"
+msgstr "Назва"
+
+#: ../timesheet.php:649
+msgid "Add status"
+msgstr "Додати статус"
+
+#: ../timesheet.php:654 ../timesheet.php:663 ../timesheet.php:683
+msgid "Enabled"
+msgstr "Включено"
+
+#: ../timesheet.php:655 ../timesheet.php:684
+msgctxt "Settings status table header"
+msgid "Name"
+msgstr "Назва"
+
+#: ../timesheet.php:656 ../timesheet.php:685
+msgctxt "Settings status table header"
+msgid "Color"
+msgstr "Колір"
+
+#: ../timesheet.php:667
+msgctxt "Settings legend table header"
+msgid "Name"
+msgstr "Назва"
+
+#: ../timesheet.php:670
+msgctxt "Settings legend table header"
+msgid "Color"
+msgstr "Колір"
+
+#: ../timesheet.php:677
+msgid "No statuses"
+msgstr "Немає статусів"
+
+#: ../timesheet.php:693
+msgid "Date format"
+msgstr "Формат дати"
+
+#: ../timesheet.php:700
+msgid "WordPress Settings"
+msgstr "Налаштування WordPress"
+
+#: ../timesheet.php:712
+msgid "Custom"
+msgstr "Користувацький"
+
+#: ../timesheet.php:723
+msgid "Documentation on date and time formatting"
+msgstr "Документація щодо форматування часу і дати"
+
+#: ../timesheet.php:727
+msgid "Allow to edit past days"
+msgstr "Дозволити редагувати минулі дні"
+
+#: ../timesheet.php:732
+msgid "Display TS user page for"
+msgstr "Відображати TS сторінку користувача для"
+
+#: ../timesheet.php:757 ../timesheet.php:812
+msgid "Close"
+msgstr "Закрити"
+
+#: ../timesheet.php:768 ../timesheet.php:823
+msgid "Unlock premium options by upgrading to Pro version"
+msgstr "Активуйте преміум опції оновившись до Pro версії"
+
+#: ../timesheet.php:771 ../timesheet.php:826
+msgid "Learn More"
+msgstr "Докладніше"
+
+#: ../timesheet.php:787
+msgid "Display TS report page for"
+msgstr "Відображати TS сторінку звітів для"
+
+#: ../timesheet.php:841
+msgid "Email reminder"
+msgstr "Нагадування на емейл"
+
+#: ../timesheet.php:843
+msgid ""
+"This option allows sending an email reminder to a user if his work schedule "
+"isn't filled out."
+msgstr ""
+"Ця опція дозволяє відправити по електронній пошті нагадування користувачеві, "
+"якщо він не заповнив графік роботи."
+
+#: ../timesheet.php:845
+msgctxt "email reminder"
+msgid "every"
+msgstr "кожен (кожну)"
+
+#: ../timesheet.php:851
+msgctxt "email reminder"
+msgid "in"
+msgstr "о"
+
+#: ../timesheet.php:855
+msgctxt "email reminder"
+msgid "Subject"
+msgstr "Тема"
+
+#: ../timesheet.php:857
+msgctxt "email reminder"
+msgid "Message"
+msgstr "Повідомлення"
+
+#: ../timesheet.php:860
+msgid ""
+"You can edit the content of reminder letter which will be sent to users. You "
+"can use the following shortcodes in the text of the message:"
+msgstr ""
+"Ви можете редагувати зміст листа нагадування, яке буде відправлено "
+"користувачам. Ви можете використовувати наступні шорткоди в тексті "
+"повідомлення:"
+
+#: ../timesheet.php:862
+msgid "this shortcode will be replaced with the username"
+msgstr "цей шорткод буде замінений на ім'я користувача"
+
+#: ../timesheet.php:863
+msgid ""
+"this shortcode will be replaced with days that are not filled by the user"
+msgstr "цей шорткод буде замінений днями, що не заповнені користувачем"
+
+#: ../timesheet.php:864
+msgid ""
+"this shortcode will be replaced with the link to TS user page in the "
+"dashboard"
+msgstr ""
+"цей шорткод буде замінен посиланням на TS сторінку користувача в панелі "
+"управління"
+
+#: ../timesheet.php:865
+msgid ""
+"this shortcode will be replaced with the link with your text to TS user page "
+"in the dashboard"
+msgstr ""
+"цей шорткод буде замінен посиланням з вашим текстом на TS сторінку "
+"користувача в панелі управління"
+
+#: ../timesheet.php:876 ../timesheet.php:1135
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: ../timesheet.php:916
+msgid "Please select..."
+msgstr "Виберіть будь ласка..."
+
+#: ../timesheet.php:931 ../timesheet.php:951
+msgid "Data has not been saved"
+msgstr "Дані не були збережені"
+
+#: ../timesheet.php:959
+msgid "Data has been saved"
+msgstr "Дані були збережені"
+
+#: ../timesheet.php:962
+msgid "Data has not been saved, because there was no change"
+msgstr "Дані не були збережені, оскільки зміни не вносилися"
+
+#: ../timesheet.php:995
+msgid "Date from"
+msgstr "Дата від"
+
+#: ../timesheet.php:999
+msgid "Date to"
+msgstr "Дата до"
+
+#: ../timesheet.php:1003
+msgid "Change date"
+msgstr "Змінити дату"
+
+#: ../timesheet.php:1008 ../timesheet.php:1420
+msgid "Status"
+msgstr "Статус"
+
+#: ../timesheet.php:1021
+msgid "Transposition table"
+msgstr "Транспонування таблиці"
+
+#: ../timesheet.php:1141
+msgid "Edit time"
+msgstr "Змінити час"
+
+#: ../timesheet.php:1141
+msgid "Available in PRO"
+msgstr "Доступно в ПРО"
+
+#: ../timesheet.php:1145
+msgid "Delete status"
+msgstr "Видалити статус"
+
+#: ../timesheet.php:1175
+msgid "Week"
+msgstr "Тиждень"
+
+#: ../timesheet.php:1176
+msgid "Month"
+msgstr "Місяць"
+
+#: ../timesheet.php:1180
+msgctxt "Group by"
+msgid "Date"
+msgstr "Датою"
+
+#: ../timesheet.php:1181
+msgctxt "Group by"
+msgid "User"
+msgstr "Користувачом"
+
+#: ../timesheet.php:1188
+msgid "Blank"
+msgstr "Порожні"
+
+#: ../timesheet.php:1189
+msgid "All statuses"
+msgstr "Всі статуси"
+
+#: ../timesheet.php:1360
+msgid "Select at least one user"
+msgstr "Виберіть хоча б одного користувача"
+
+#: ../timesheet.php:1375
+msgid "Date"
+msgstr "Дата"
+
+#: ../timesheet.php:1384
+msgctxt "date"
+msgid "from"
+msgstr "з"
+
+#: ../timesheet.php:1388
+msgctxt "date"
+msgid "to"
+msgstr "по"
+
+#: ../timesheet.php:1414
+msgid "Group by"
+msgstr "Сортувати за"
+
+#: ../timesheet.php:1432
+msgid "Users"
+msgstr "Користувачі"
+
+#: ../timesheet.php:1435
+msgid "Search user"
+msgstr "Пошук користувача"
+
+#: ../timesheet.php:1439
+msgctxt "All users"
+msgid "All users"
+msgstr "Всі користувачі"
+
+#: ../timesheet.php:1445
+msgctxt "Search user"
+msgid "No results"
+msgstr "За вашим запитом нічого не знайдено"
+
+#: ../timesheet.php:1452
+msgctxt "Search user"
+msgid "No users to select"
+msgstr "Немає доступних користувачів для вибору"
+
+#: ../timesheet.php:1473
+msgctxt "Apply ts report"
+msgid "Apply"
+msgstr "Застосувати"
+
+#: ../timesheet.php:1533 ../timesheet.php:1651 ../timesheet.php:1753
+msgid "No data to view"
+msgstr "Немає доступних даних для перегляду"
+
+#: ../timesheet.php:1940
+msgid "FAQ"
+msgstr "FAQ"
+
+#: ../timesheet.php:1941
+msgid "Support"
+msgstr "Тех. Підтримка"
+
+#: ../timesheet.php:1973
+msgid "Once Weekly"
+msgstr "Один раз на тиждень"
+
+#~ msgid "Legend has not been added"
+#~ msgstr "Легенда не додана"
+
+#~ msgid "Legends"
+#~ msgstr "Легенди"
+
+#~ msgid "Add Legend"
+#~ msgstr "Додати Легенду"
+
+#~ msgid "No legends"
+#~ msgstr "Немає легенд"
+
+#~ msgid "Reset"
+#~ msgstr "Скидання"
+
+#~ msgid "Legend"
+#~ msgstr "Легенда"
+
+#~ msgid "Delete legend"
+#~ msgstr "Видалити легенду"
+
+#~ msgid "All Legends"
+#~ msgstr "Всі легенди"
+
+#~ msgid ""
+#~ "Hi {user_name},\n"
+#~ "\n"
+#~ "Please complete your timesheet for the following days:\n"
+#~ "\n"
+#~ "{list_days}\n"
+#~ "\n"
+#~ "{{ts_page_link}Complete Timesheet Now{/ts_page_link}}"
+#~ msgstr ""
+#~ "Привіт, {user_name},\n"
+#~ "\n"
+#~ "Будь ласка, заповніть ваш графік за наступні дні:\n"
+#~ "\n"
+#~ "{list_days}\n"
+#~ "\n"
+#~ "{{ts_page_link}Заповнити Графік Зараз{/ts_page_link}}"
+
+#~ msgid "Reminder"
+#~ msgstr "Нагадування"
+
+#~ msgid "Please fill out the schedule"
+#~ msgstr "Будь ласка, заповніть графік"
+
+#~ msgid "on this page"
+#~ msgstr "на цій сторінці"
+
+#~ msgid "for the following days"
+#~ msgstr "для наступних днів"
+
+#~ msgid "Reminder on email"
+#~ msgstr "Нагадування на емейл"
+
+#~ msgid "Choose a day"
+#~ msgstr "Виберіть день"
+
+#~ msgid "Details"
+#~ msgstr "Деталі"
+
+#~ msgid "Advanced report"
+#~ msgstr "Розширений звіт"
+
+#~ msgid "Highlight current day"
+#~ msgstr "Виділити поточний день"

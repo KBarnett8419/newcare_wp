@@ -1343,6 +1343,58 @@ function education_zone_customize_register( $wp_customize ) {
         )
     );
     
+    /** Ok */
+    $wp_customize->add_setting(
+        'education_zone_ok',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+    
+    $wp_customize->add_control(
+        'education_zone_ok',
+        array(
+            'label' => __( 'OK', 'education-zone' ),
+            'section' => 'education_zone_social_settings',
+            'type' => 'text',
+        )
+    );
+    /** Vk */
+    $wp_customize->add_setting(
+        'education_zone_vk',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+    
+    $wp_customize->add_control(
+        'education_zone_vk',
+        array(
+            'label' => __( 'VK', 'education-zone' ),
+            'section' => 'education_zone_social_settings',
+            'type' => 'text',
+        )
+    );
+
+    /** Xing */
+    $wp_customize->add_setting(
+        'education_zone_xing',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+    
+    $wp_customize->add_control(
+        'education_zone_xing',
+        array(
+            'label' => __( 'Xing', 'education-zone' ),
+            'section' => 'education_zone_social_settings',
+            'type' => 'text',
+        )
+    );
     /**
      * Sanitization Functions
      * 
