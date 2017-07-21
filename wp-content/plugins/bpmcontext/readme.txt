@@ -4,7 +4,7 @@ Tags: intranet, extranet, workflow, file sharing, task management, file sharing,
 Donate link:
 Requires at least: 3.5.0
 Tested up to: 4.8
-Stable tag: 3.1.7
+Stable tag: 3.1.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -116,8 +116,11 @@ Go to [https;//support.bpmcontext.com](https://support.bpmcontext.com "Help Cent
 
 == Changelog ==
 
-= 3.1.9 =
+= 3.1.10 =
 * Current version
+* Fixed error for dropdown management on workspaces
+
+= 3.1.9 =
 * Minor bug fixes, speed enhancments and theme compatibility improvements
 
 = 3.1.7 =
@@ -253,5 +256,5 @@ Go to [https;//support.bpmcontext.com](https://support.bpmcontext.com "Help Cent
 
 == Upgrade Notice ==
 
-= 3.1.9 =
-* Minor bug fixes, speed enhancments and theme compatibility improvements
+= 3.1.10 =
+* Fixed error for dropdown management on workspaces

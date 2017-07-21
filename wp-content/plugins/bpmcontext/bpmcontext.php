@@ -3,7 +3,7 @@
   Plugin Name: BPMContext - Intranet Plus
   Plugin URI: https://bpmcontext.com
   Description: Add an intranet dashboard to facilitate team communications and collaboration with Intranet Plus by BPMContext, a dynamic, extendable plugin for WordPress. Go to Settings -> Intranet Plus to add Intranet Plus to your site.
-  Version: 3.1.9
+  Version: 3.1.10
   Author: BPMContext
   Author URI: https://bpmcontext.com
   License: GPLv2+
@@ -19,7 +19,7 @@ global $bpm_sdk_version , $bpm_server_info;
 $bpm_server_info['bpm_server']      = 'bpm.bpmcontext.com';
 $bpm_server_info['bpm_api']         = 'api_v3_1_9';
 $bpm_server_info['bpm_marketing']   = 'bpmcontext.com';
-$bpm_this_sdk_version = 319;
+$bpm_this_sdk_version = 320;
 
 if( $bpm_this_sdk_version > $bpm_sdk_version ) $bpm_sdk_version = $bpm_this_sdk_version ;
 

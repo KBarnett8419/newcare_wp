@@ -7230,7 +7230,7 @@ var line_number = new Error().lineNumber;
             var this_dd_values = [];
             var is_dd_selected = 0;
 
-            var type_dd = '<select class="bpm_ws_manager_field" id="bpm_template_dd_selected_'+this_index+'" onchange="bpm_change_dropdown_config_set('+this_index +')">';
+            var type_dd = '<select class="bpm_ws_manager_field" id="bpm_template_dd_selected_'+this_index+'" onchange="bpmcontext.bpm_change_dropdown_config_set('+this_index +')">';
 
             type_dd = type_dd.concat('<option selected value="0">Create dropdown set...</option>');
 
