@@ -25,8 +25,10 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding" style="margin-top: -110px; position: relative; left: 20px">
-			<img class="logo" src='http://localhost/newcare/wp-content/uploads/2017/07/cropped-logo-trans-1.png' alt='new-care-associates-logo' style="position: relative; top: 100px"/><h1>New Care Associates</h1>
-			<h2 class="motto" style="font-style: italic; font-size: 1.2em; color:#990000; margin-left: 180px; margin-top: -20px">"Together We Achieve."</h2>
+			<div class="logo">
+			<img src='http://localhost/newcare/wp-content/uploads/2017/07/cropped-logo-trans-1.png' alt='new-care-associates-logo' style="position: relative; top: 100px"/><h1>New Care Associates</h1>
+				</div><!--logo-->
+			<h2 class="motto">"Together We Achieve."</h2>
 		</div><!-- .site-branding -->
 
 			<div class="contact-header">

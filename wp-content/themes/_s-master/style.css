@@ -612,12 +612,12 @@ a:active {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: none;
 }
 
 @media screen and (min-width: 20em) {
 	.menu-toggle {
-		display: block;
+		display: none;
 	}
 	.main-navigation ul {
 		display: none;
@@ -924,16 +924,49 @@ overflow-x: hidden;
 }
 
 .site-branding h1 {
-	color: #990000;
-	text-transform: uppercase;
+    color: #990000;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-left: 100px;
+    margin-top: 25px;
 }
 
 h1.entry-title {
 	display: none;
 }
 
+.motto {
+	font-style: italic;
+	font-size: 1.2em;
+	color: #990000;
+	margin-left: 50px;
+	margin-top: -15px;
+}
+
+.logo {
+	position: relative;
+	left: 20px;
+}
+
+.contact-header {
+	display: none;
+}
+
+.mobile-info-banner {
+	clear: both;
+	display: block;
+	color:#fff;
+	background-color: #990000;
+	padding: 7px;
+}
+
+.mobile-info-text {
+	padding-left: 10%;
+	font-size: 0.7em;
+}
 
 /*========NAVIGATION / MENU mobile======*/
+
 .main-navigation {
 	border: 1px solid #990000;
   background-color: #990000;
@@ -967,11 +1000,34 @@ footer {
 	display: none;
 }
 
-/*======= HOME BOXES ==================*/
+/*====BENEFIT BANNER mobile ======*/
+
+.banner {
+	font-size: 1.1em;
+  color: #fff;
+  font-style: italic;
+  border-top: 3px solid #bc9b1b;
+  border-bottom: 3px solid #bc9b1b;
+	background-color: #bc9b1b;
+	position: relative;
+	bottom: 0;
+}
+
+h4 {
+	margin: 1% 5% 0 17%;
+}
+
+.icon {
+	width: 80px;
+	height: 80px;
+}
+
+
+/*======= HOME BOXES mobile==================*/
 .boxed-section-container {
 	position: relative;
-	left: 0;
 	bottom: 0;
+	right: 15%;
 }
 
 #home-section-1, #home-section-2, #home-section-3, #home-section-4  {
@@ -980,13 +1036,47 @@ footer {
 	width: 100%;
 	height: auto;
 	float: none;
-	padding: 5%;
-	color: #404040;
-	text-align: left;
+	padding: 0;
+	color: #bc9b1b;
+	text-align: center;
+	margin: 5% 15%;
 }
+
+.home-sections {
+	position: relative;
+	left: 0;
+}
+
+/*=====CALL TO ACTION mobile========*/
+
+.button {
+	clear: both;
+	position: relative;
+	left: 29%;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+/*======ADDRESS mobile ==========*/
+
+.address {
+	text-align: center;
+	color: #fff;
+	font-size: 1.3em;
+	margin-top: 50px;
+	background-color: #990000;
+  padding: 3%;
+	margin-bottom: -80px;
+}
+
+/*=====OTHER PAGES mobile========*/
 
 .nc-content-container {
 	margin: 10%;
+}
+
+.nc-content-wrapper {
+	margin-left: 5%;
 }
 
 .nc-content-wrapper h2 {
@@ -1011,11 +1101,143 @@ footer {
 	width: 100%;
 }
 
+.nf-form-layout {
+	margin-right: 10%;
+}
+
 .nf-form-fields-required {
 	margin-bottom: 5%;
 }
 
+@media screen and (min-width : 768px) {
 
+	.motto {
+	 font-style: italic;
+	 font-size: 1.2em;
+	 color: #990000;
+	 margin-left: 100px;
+	 margin-top: -15px;
+	}
+
+	.mobile-info-banner {
+		clear: both;
+		display: none;
+	}
+
+	.mobile-info-text {
+  	padding-left: 5%;
+  	font-size: 0.7em;
+  }
+
+	.contact-header {
+		display: block;
+		margin-right: 20px;
+    position: relative;
+    bottom: 85px;
+    font-size: 0.9em;
+		color: #990000;
+		float: right;
+	}
+
+	#mega-menu-wrap-menu-1 {
+		margin-top: -70px;
+	}
+
+	.mega-menu-link {
+		padding: 0px 10px 0 10px;
+	}
+
+	.smartslide-homepage {
+		margin-top: -20px;
+	}
+
+
+	/*=======BANNER 768=========*/
+
+	.banner {
+		font-size: 1.5em;
+		color: #bc9b1b;
+		font-style: italic;
+		border-top: 5px solid #bc9b1b;
+		border-bottom: 5px solid #bc9b1b;
+		background-color: #fff;
+		position: relative;
+		bottom: 30px;
+	}
+
+	h4 {
+		padding-left: 28%;
+		margin-top: 5px;
+		margin-bottom: 0;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	/*=========HOME BOXES 768====================*/
+		.boxed-section-container {
+		clear: both;
+		position: relative;
+		left: 9.5%;
+	}
+
+		#home-section-1, #home-section-2, #home-section-3, #home-section-4  {
+		  width: 20%;
+		  height: 300px;
+		  float: left;
+		  padding: 1%;
+		  color: #bc9b1b;
+		  text-align: center;
+			background-color: #fff;
+			font-size: 1.2em;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		#home-section-1, #home-section-2, #home-section-3 {
+			border-right: 2px solid #bc9b1b;
+		}
+
+	.home-sections p {
+		clear:both;
+		position: relative;
+		top: 40px;
+	}
+
+	.icon {
+		position: relative;
+		top: 40px;
+		left: 20px;
+		display: block;
+	}
+
+	#safety {
+		position: relative;
+		top: 40px;
+		left: 28px;
+	}
+
+	#boundaries {
+		position: relative;
+		left: 30px;
+	}
+
+.button {
+	position: relative;
+	left: 37%;
+}
+
+/*=====NINJA FORMS 768 ========*/
+.ninja-forms-form-wrap {
+	margin: 5%;
+	width: 60%;
+}
+
+/*====OTHER PAGE FORMAT 768=======*/
+.nc-content-wrapper {
+	margin-left: 10%;
+}
+
+}
 
 @media screen and (min-width: 940px) {
 
@@ -1025,16 +1247,20 @@ footer {
 		text-transform: uppercase;
 		position: relative;
 		left: 100px;
+		margin-left: 0;
+		margin-top: 30px;
 	}
 
-/*
-	img {
-		position: relative;
-		top: 100px;
-	}
-*/
+.motto {
+	font-style: italic;
+	font-size: 1.2em;
+	color:#990000;
+	margin-left: 100px;
+	margin-top: -20px;
+}
 
  .contact-header {
+	 display: block;
 		float: right;
     margin-right: 30px;
     position: relative;
@@ -1043,7 +1269,19 @@ footer {
     color: #990000;
 }
 
+.mobile-info-banner {
+	display: none;
+}
+
 /*==========NAVIGATION 940==================*/
+#mega-menu-wrap-menu-1 {
+	margin-top: auto;
+}
+
+.smartslide-homepage {
+	margin-top: auto;
+}
+
 .main-navigation {
 	border: 1px solid #990000;
   background-color: #990000;
@@ -1074,6 +1312,8 @@ h4 {
 	padding-left: 32.5%;
 	margin-top: 5px;
 	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 /*=========HOME BOXES 940====================*/
@@ -1093,6 +1333,7 @@ h4 {
 		background-color: #fff;
 		font-size: 1.2em;
 		font-weight: bold;
+		margin: 0;
 	}
 
 	#home-section-1, #home-section-2, #home-section-3 {
@@ -1106,6 +1347,8 @@ h4 {
 }
 
 .icon {
+	width: 100px;
+	height: 92px;
 	position: relative;
 	top: 40px;
 	left: 50px;
